@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stages ('Build Docker Image') {
+        stage ('Build Docker Image') {
               steps {
                 sh 'echo "Executando o comando Docker Build"'
             }
         }
 
-        stages ('Push Docker Image') {
+        stage ('Push Docker Image') {
                 steps {
                   sh 'echo "Executando o comando Docker Push"'
               }
           }
 
-        stages ('Deploy no Kubernetes') {
+        stage ('Deploy no Kubernetes') {
                 steps {
                   sh 'echo "Executando o comando Kubernetes apply"'
               }
