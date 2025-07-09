@@ -14,7 +14,7 @@ pipeline {
               }
           }
 
-        stages ('Deploy no Kubernetes) {
+        stages ('Deploy no Kubernetes') {
                 steps {
                   sh 'echo "Executando o comando Kubernetes apply"'
               }
